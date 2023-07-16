@@ -24,7 +24,7 @@ pub struct Raw {
     pub format: Format,
 
     /// Limit on how many results
-    #[arg(short, long)]
+    #[arg(short, long, default_value_t = 100)]
     pub limit: i32,
 }
 
