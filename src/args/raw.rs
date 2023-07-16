@@ -22,6 +22,10 @@ pub struct Raw {
 
     #[arg(short, long, value_enum, default_value_t = Format::Csv)]
     pub format: Format,
+
+    /// Limit on how many results
+    #[arg(short, long)]
+    pub limit: i32,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]

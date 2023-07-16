@@ -18,6 +18,7 @@ pub async fn search_raw(raw: Raw) -> Result<()> {
         .start_time(raw.start_time.timestamp())
         .end_time(raw.end_time.timestamp())
         .query_string(raw.query_string)
+        .limit(raw.limit)
         .send()
         .await?;
 

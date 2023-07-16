@@ -16,10 +16,10 @@ pub async fn search(search: Search) -> Result<()> {
             r#"
             fields @message
             | filter @message like /{}/
-            | limit {}
         "#,
-            search.key, search.limit
+            search.key
         ))
+        .limit(search.limit)
         .send()
         .await?;
     let query_id = result

@@ -22,5 +22,5 @@ pub struct Search {
 
     /// Max number of log events
     #[arg(short, long, default_value_t = 100)]
-    pub limit: usize,
+    pub limit: i32,
 }
